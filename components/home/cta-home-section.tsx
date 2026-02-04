@@ -75,7 +75,7 @@ export function CTAHomeSection() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Button
                 size="lg"
-                onClick={openFloatingContact}
+                onClick={() => openFloatingContact()}
                 className={`bg-gradient-to-r ${BRAND_COLORS.gradient} text-white hover:opacity-90 gap-2 text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 rounded-full font-semibold shadow-2xl shadow-blue-600/30 border-0`}
               >
                 <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5" />

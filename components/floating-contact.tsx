@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,10 +9,16 @@ import { PrivacyPolicyModal } from "@/components/modal/privacy-policy-modal";
 // 전역 이벤트 이름
 export const OPEN_FLOATING_CONTACT_EVENT = "openFloatingContact";
 
+// 전역 상태로 이벤트 리스너 중복 등록 방지
+let globalSetIsOpen: ((value: boolean) => void) | null = null;
+
 // 외부에서 FloatingContact를 열기 위한 유틸리티 함수
 export function openFloatingContact() {
   if (typeof window !== "undefined") {
-    window.dispatchEvent(new CustomEvent(OPEN_FLOATING_CONTACT_EVENT));
+    // 직접 전역 상태 함수 호출 (이벤트 대신)
+    if (globalSetIsOpen) {
+      globalSetIsOpen(true);
+    }
   }
 }
 
@@ -37,18 +43,17 @@ export function FloatingContact() {
     message: "",
   });
 
-  // 외부에서 열기 이벤트 리스너
-  const handleOpenEvent = useCallback(() => {
-    setIsOpen(true);
-    setShowBounce(false);
-  }, []);
-
+  // 전역 상태 함수 등록
   useEffect(() => {
-    window.addEventListener(OPEN_FLOATING_CONTACT_EVENT, handleOpenEvent);
-    return () => {
-      window.removeEventListener(OPEN_FLOATING_CONTACT_EVENT, handleOpenEvent);
+    globalSetIsOpen = (value: boolean) => {
+      setIsOpen(value);
+      if (value) setShowBounce(false);
     };
-  }, [handleOpenEvent]);
+    
+    return () => {
+      globalSetIsOpen = null;
+    };
+  }, []);
 
   // 초기 바운스 애니메이션 후 중지
   useEffect(() => {
@@ -125,6 +130,7 @@ export function FloatingContact() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            key="floating-overlay"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -138,6 +144,7 @@ export function FloatingContact() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            key="floating-panel"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}

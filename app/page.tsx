@@ -2,7 +2,6 @@
 
 // Layout Components
 import { Header, Footer } from "@/components/layout";
-import { FloatingContact } from "@/components/floating-contact";
 
 // Home Page Sections
 import {
@@ -33,8 +32,6 @@ export default function HomePage() {
 
       {/* Footer */}
       <Footer />
-
-      <FloatingContact />
     </div>
   );
 }

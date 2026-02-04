@@ -41,7 +41,7 @@ export function WorksCTASection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              onClick={openFloatingContact}
+              onClick={() => openFloatingContact()}
               className="bg-gradient-to-r from-[#0d4f8b] to-[#3ecf8e] text-white hover:opacity-90"
             >
               {lang === "ko" ? "무료 상담 신청" : "Free Consultation"}

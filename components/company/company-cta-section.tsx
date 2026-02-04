@@ -6,15 +6,7 @@ import { Button } from "@/components/ui/button";
 import { BRAND_COLORS } from "@/data";
 import { useI18n } from "@/lib/i18n";
 import { MessageSquare } from "lucide-react";
-
-export const OPEN_FLOATING_CONTACT_EVENT = "openFloatingContact";
-
-// 외부에서 FloatingContact를 열기 위한 유틸리티 함수
-export function openFloatingContact() {
-  if (typeof window !== "undefined") {
-    window.dispatchEvent(new CustomEvent(OPEN_FLOATING_CONTACT_EVENT));
-  }
-}
+import { openFloatingContact } from "@/components/floating-contact";
 
 // 애니메이션 섹션 래퍼
 function AnimatedSection({
@@ -117,7 +109,7 @@ export function CompanyCTASection({ }: CompanyCTASectionProps) {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Button
                 size="lg"
-                onClick={openFloatingContact}
+                onClick={() => openFloatingContact()}
                 className={`bg-gradient-to-r ${BRAND_COLORS.gradient} text-white hover:opacity-90 gap-2 text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 rounded-full font-semibold shadow-2xl shadow-blue-600/30 border-0`}
               >
                 <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5" />
