@@ -1,0 +1,240 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* ======================================
+   라이트 모드 - 밝고 깨끗한 IT 느낌
+   ====================================== */
+:root {
+  --radius: 0.625rem;
+  /* 배경: 순수 흰색에 가까운 밝은 배경 */
+  --background: oklch(0.995 0.001 240);
+  /* 텍스트: 진한 네이비 그레이 (읽기 좋은) */
+  --foreground: oklch(0.18 0.02 250);
+  /* 카드: 순백색 */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 250);
+  /* Integro Primary Blue: 선명한 블루 */
+  --primary: oklch(0.45 0.18 245);
+  --primary-foreground: oklch(0.99 0 0);
+  /* Secondary: 매우 밝은 그레이 */
+  --secondary: oklch(0.97 0.005 250);
+  --secondary-foreground: oklch(0.25 0.02 250);
+  /* Muted: 부드러운 그레이 */
+  --muted: oklch(0.96 0.008 250);
+  --muted-foreground: oklch(0.45 0.015 250);
+  /* Accent: 청록색 (DX/AX 강조) */
+  --accent: oklch(0.72 0.16 175);
+  --accent-foreground: oklch(0.15 0.02 250);
+  --destructive: oklch(0.577 0.245 27.325);
+  /* 테두리: 미세한 구분선 */
+  --border: oklch(0.92 0.005 250);
+  --input: oklch(0.92 0.005 250);
+  --ring: oklch(0.45 0.18 245);
+  /* 차트 색상 */
+  --chart-1: oklch(0.45 0.18 245);
+  --chart-2: oklch(0.72 0.16 175);
+  --chart-3: oklch(0.55 0.12 210);
+  --chart-4: oklch(0.65 0.14 230);
+  --chart-5: oklch(0.78 0.12 185);
+}
+
+/* ======================================
+   다크 모드 - 눈 편한 딥 다크 테마
+   ====================================== */
+.dark {
+  /* 배경: 깊은 네이비 다크 */
+  --background: oklch(0.13 0.02 250);
+  /* 텍스트: 밝은 그레이 (눈 피로 감소) */
+  --foreground: oklch(0.92 0.01 250);
+  /* 카드: 약간 밝은 다크 */
+  --card: oklch(0.18 0.02 250);
+  --card-foreground: oklch(0.92 0.01 250);
+  --popover: oklch(0.18 0.02 250);
+  --popover-foreground: oklch(0.92 0.01 250);
+  /* Primary: 밝은 블루 (다크 모드용) */
+  --primary: oklch(0.68 0.16 235);
+  --primary-foreground: oklch(0.13 0.02 250);
+  /* Secondary */
+  --secondary: oklch(0.22 0.02 250);
+  --secondary-foreground: oklch(0.92 0.01 250);
+  /* Muted */
+  --muted: oklch(0.22 0.02 250);
+  --muted-foreground: oklch(0.62 0.015 250);
+  /* Accent: 청록 (다크 모드) */
+  --accent: oklch(0.72 0.16 175);
+  --accent-foreground: oklch(0.13 0.02 250);
+  --destructive: oklch(0.704 0.191 22.216);
+  /* 테두리 */
+  --border: oklch(0.28 0.02 250);
+  --input: oklch(0.28 0.02 250);
+  --ring: oklch(0.68 0.16 235);
+  /* 차트 색상 */
+  --chart-1: oklch(0.68 0.16 235);
+  --chart-2: oklch(0.72 0.16 175);
+  --chart-3: oklch(0.58 0.14 210);
+  --chart-4: oklch(0.68 0.14 240);
+  --chart-5: oklch(0.78 0.12 185);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Spline 캔버스가 부모 컨테이너를 채우도록 */
+[data-spline-app] {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+[data-spline-app] canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* ======================================
+   Swiper 커스텀 스타일
+   ====================================== */
+
+/* 네비게이션 버튼 */
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-primary;
+  --swiper-navigation-size: 24px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply text-xl font-bold;
+}
+
+/* 페이지네이션 */
+.swiper-pagination-bullet {
+  @apply bg-foreground/30 opacity-100 transition-all duration-300;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary scale-125;
+}
+
+/* 수평 페이지네이션 */
+.swiper-pagination-horizontal {
+  @apply bottom-4;
+}
+
+/* 다크 모드 대응 */
+.dark .swiper-button-next,
+.dark .swiper-button-prev {
+  @apply text-primary;
+}
+
+/* ======================================
+   스크롤 스냅 유틸리티
+   ====================================== */
+
+.scroll-snap-y {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.scroll-snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+}
+
+/* ======================================
+   부드러운 스크롤
+   ====================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 스크롤 스냅 컨테이너에서는 smooth scroll 비활성화 */
+.scroll-snap-y {
+  scroll-behavior: auto;
+}
+
+/* ======================================
+   애니메이션 선호도 존중
+   ====================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ======================================
+   풀스크린 섹션
+   ====================================== */
+
+.fullscreen-section {
+  @apply relative flex h-screen w-full items-center justify-center overflow-hidden;
+}
+
+/* ======================================
+   텍스트 그라데이션
+   ====================================== */
+
+.text-gradient {
+  @apply bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent;
+}
+
+.text-gradient-hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
