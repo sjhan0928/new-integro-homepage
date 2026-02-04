@@ -26,7 +26,7 @@ const defaultContent = {
   },
 };
 
-const DEFAULT_CTA_IMAGE = "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80";
+const DEFAULT_CTA_IMAGE = "/images/company/customer.jpg";
 
 interface ServicesCTASectionProps {
   content?: {

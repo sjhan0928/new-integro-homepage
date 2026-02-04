@@ -18,22 +18,22 @@ import { PartnersMarquee } from "@/components/home";
 
 // 회사소개 페이지 이미지
 const IMAGES = {
-  hero: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
-  about: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80",
-  team: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
-  office: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80",
-  tech: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80",
+  hero: "/images/company/hero.jpg",
+  about: "/images/company/about.jpg",
+  team: "/images/company/team.jpg",
+  office: "/images/company/office.jpg",
+  tech: "/images/company/tech.jpg",
   vision: {
-    digital: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=80",
-    smart: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80",
-    growth: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80",
+    digital: "/images/company/digital.jpg",
+    smart: "/images/company/smart.jpg",
+    growth: "/images/company/growth.jpg",
   },
   values: {
-    customer: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80",
-    innovation: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
-    trust: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&q=80",
+    customer: "/images/company/customer.jpg",
+    innovation: "/images/company/innovation.jpg",
+    trust: "/images/company/trust.jpg",
   },
-  cta: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80",
+  cta: "/images/company/customer.jpg",
 };
 
 export default function CompanyPage() {

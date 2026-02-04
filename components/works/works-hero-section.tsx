@@ -15,7 +15,7 @@ export function WorksHeroSection() {
       {/* 배경 이미지 */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80"
+          src="/images/works/hero.jpg"
           alt="Works Background"
           fill
           className="object-cover"

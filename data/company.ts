@@ -201,17 +201,17 @@ export const companyData = {
     title: "INTEGRATION FOR GROWS",
     cta: "서비스 살펴보기",
     images: [
-      "/images/hero-1.jpg",
-      "/images/hero-2.jpg",
-      "/images/hero-3.jpg"
+      "/images/hero-bright-office.jpg",
+      "/images/performance-dashboard.jpg",
+      "/images/domain-analytics.jpg"
     ],
-    logo: "/images/logo.png"
+    logo: "/images/logo_color.png"
   },
 
   about: {
     title: "회사소개",
     subtitle: "인테그로 주식회사는 효율적인 자원 관리와 운영 프로세스를 지원하는 IT 전문 기업입니다.",
-    image: "/images/about-image-new.jpg",
+    image: "/images/company/about.jpg",
     features: [
       {
         title: "맞춤형 ERP 시스템",
@@ -234,22 +234,22 @@ export const companyData = {
   vision: {
     title: "비전",
     quote: "인테그로는 다양한 산업 분야의 디지털 전환(Digital Transformation)을 선도하며, 스마트 운영 Eco 시스템 구축을 통해 고객사의 지속 가능한 비즈니스 성장과 효율성 향상에 기여합니다.",
-    mainImage: "/images/digital-transformation.jpg",
+    mainImage: "/images/domain-analytics.jpg",
     pillars: [
       {
         title: "디지털 전환",
         description: "다양한 산업 분야의 디지털 혁신을 선도하며, 기업의 디지털 경쟁력을 강화합니다.",
-        image: "/images/smart-operations.jpg"
+        image: "/images/company/digital.jpg"
       },
       {
         title: "스마트 운영",
         description: "효율적인 Eco 시스템 구축을 통해 기업의 운영 프로세스를 최적화합니다.",
-        image: "/images/sustainable-growth.jpg"
+        image: "/images/company/smart.jpg"
       },
       {
         title: "지속 가능한 성장",
         description: "고객사의 비즈니스 성장과 효율성을 향상시켜 장기적인 경쟁력을 확보합니다.",
-        image: "/images/sustainable-growth.jpg"
+        image: "/images/company/growth.jpg"
       }
     ]
   },
@@ -263,7 +263,7 @@ export const companyData = {
         name: "ISOD ERP",
         tagline: "정유 유통 산업에 최적화된 스마트 ERP 시스템",
         description: "정유 및 에너지 유통 전문 기업을 위한 ISOD ERP는 주유소, 물류, 거래처, 재고 및 정산 등 유통 전 과정을 통합 관리하는 업계 맞춤형 ERP 솔루션입니다.",
-        image: "/images/products/isod-erp.png",
+        image: "/images/domain-erp.jpg",
         link: "#"
       },
       {
@@ -271,7 +271,7 @@ export const companyData = {
         name: "In2On",
         tagline: "오프라인 비즈니스의 온라인 전환을 위한 O2O 통합 플랫폼",
         description: "In2On은 오프라인 중심의 기업들이 온라인 시스템과 자연스럽게 연동되어, 운영의 효율성과 비즈니스 확장성을 동시에 확보할 수 있도록 도와주는 O2O 통합 솔루션입니다.",
-        image: "/images/products/in2on.png",
+        image: "/images/domain-integration.jpg",
         link: "#"
       },
       {
@@ -279,7 +279,7 @@ export const companyData = {
         name: "Intemall",
         tagline: "셀러와 소비자를 연결하는 통합 커머스 플랫폼",
         description: "Intemall은 단순한 쇼핑몰 CMS가 아닌, 셀러와 고객이 만나는 모든 접점을 통합하는 디지털 플랫폼입니다.",
-        image: "/images/products/intemall.png",
+        image: "/images/domain-ecommerce.jpg",
         link: "#"
       }
     ]
@@ -293,42 +293,42 @@ export const companyData = {
         id: "it-consulting",
         name: "IT 컨설팅",
         description: "고객사의 비즈니스 목표와 요구사항을 철저히 분석하여 전략적 IT 계획 수립부터 솔루션 도입, 운영까지 포괄적으로 지원합니다.",
-        image: "/images/service-consulting.jpg",
+        image: "/images/domain-custom.jpg",
         link: "#"
       },
       {
         id: "system-integration",
         name: "시스템 통합",
         description: "기업 내 다양한 시스템 및 애플리케이션 간의 효율적인 데이터 연동과 프로세스 통합을 통해 업무 효율성과 정보의 정확성을 높입니다.",
-        image: "/images/service-integration.jpg",
+        image: "/images/domain-integration.jpg",
         link: "#"
       },
       {
         id: "erp-development",
         name: "ERP 구축",
         description: "기업의 운영 효율을 극대화하기 위한 맞춤형 ERP 솔루션을 제공합니다. SCM, CRM, 재무 및 회계, 인사 관리 등 비즈니스 전반을 통합합니다.",
-        image: "/images/service-erp.jpg",
+        image: "/images/domain-erp.jpg",
         link: "#"
       },
       {
         id: "ecommerce",
         name: "E-Commerce 솔루션",
         description: "온라인 비즈니스 플랫폼 구축을 통해 사용자 친화적인 쇼핑 경험을 제공하며, 효율적인 재고 관리와 결제 시스템 통합을 제공합니다.",
-        image: "/images/service-ecommerce.jpg",
+        image: "/images/domain-ecommerce.jpg",
         link: "#"
       },
       {
         id: "cctv-access-control",
         name: "CCTV 및 출입 통제 시스템",
         description: "시설물 및 자산 보호를 위한 첨단 CCTV 감시 시스템과 출입 통제 시스템을 설계, 구축 및 유지보수합니다.",
-        image: "/images/service-cctv.jpg",
+        image: "/images/dashboard.jpg",
         link: "#"
       },
       {
         id: "business-intelligence",
         name: "비즈니스 인텔리전스",
         description: "빅데이터 분석과 시각화 기술을 활용하여 기업의 데이터를 가치 있는 인사이트로 전환합니다.",
-        image: "/images/service-bi.jpg",
+        image: "/images/performance-dashboard.jpg",
         link: "#"
       }
     ]
@@ -337,7 +337,7 @@ export const companyData = {
   global: {
     title: "글로벌",
     subtitle: "베트남 글로벌 개발 센터를 운영하여 현지 시장은 물론 글로벌 고객의 요구를 신속하고 정확하게 충족시킬 수 있는 글로벌 경쟁력을 갖추고 있습니다.",
-    mainImage: "/images/vietnam-office.jpg",
+    mainImage: "/images/custom-development.jpg",
     location: "베트남 호치민시",
     features: [
       {
@@ -395,12 +395,7 @@ export const partners: Partner[] = [
   { name: "GS25", logo: "/images/partners/gs25.png" },
   { name: "SK에너지", logo: "/images/partners/sk-energy.svg" },
   { name: "롯데정보통신", logo: "/images/partners/lotte-it.svg" },
-  { name: "틱택", logo: "/images/partners/틱택.png" },
   { name: "국토부", logo: "/images/partners/molit.png" },
-  { name: "한국생산성본부", logo: "/images/partners/한국생산성본부.png" },
-  { name: "지방시대위원회", logo: "/images/partners/지방시대위원회.svg" },
-  { name: "성북구", logo: "/images/partners/성북구.png" },
-  { name: "국가건축정책위원회", logo: "/images/partners/국가건축정책위원회.png" },
 ];
 
 // 네비게이션 아이템

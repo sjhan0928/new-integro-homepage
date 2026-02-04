@@ -20,8 +20,65 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Integro Homepage Demo",
-  description: "Next.js 기반 홈페이지 데모",
+  title: {
+    default: "인테그로 | DX/AX 디지털 전환 전문 기업",
+    template: "%s | 인테그로",
+  },
+  description: "인테그로는 기업의 디지털 전환(DX)과 AI 전환(AX)을 위한 최적의 IT 솔루션 파트너입니다. ERP, 시스템 통합, 맞춤형 개발, AI 솔루션을 제공합니다.",
+  keywords: ["디지털 전환", "DX", "AX", "AI 전환", "ERP", "시스템 통합", "맞춤형 개발", "IT 솔루션", "인테그로", "Integro"],
+  authors: [{ name: "인테그로 주식회사" }],
+  creator: "Integro Co., Ltd.",
+  publisher: "Integro Co., Ltd.",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://integro.work"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "ko-KR": "/",
+      "en-US": "/en",
+    },
+  },
+  openGraph: {
+    title: "인테그로 | DX/AX 디지털 전환 전문 기업",
+    description: "인테그로는 기업의 디지털 전환(DX)과 AI 전환(AX)을 위한 최적의 IT 솔루션 파트너입니다.",
+    url: "https://integro.work",
+    siteName: "인테그로",
+    locale: "ko_KR",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "인테그로 - 디지털 전환 전문 기업",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "인테그로 | DX/AX 디지털 전환 전문 기업",
+    description: "인테그로는 기업의 디지털 전환(DX)과 AI 전환(AX)을 위한 최적의 IT 솔루션 파트너입니다.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    // Google Search Console 등록 후 추가
+    // google: "verification_token",
+  },
 };
 
 export default function RootLayout({

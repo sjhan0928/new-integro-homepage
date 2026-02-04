@@ -82,7 +82,7 @@ export const inventoryApp: BusinessApp = {
   icon: Package,
   color: "#F59E0B",
   bgColor: "#FEF3C7",
-  heroImage: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1200&q=80",
+  heroImage: "/images/apps/inventory-hero.jpg",
   
   features: [
     {
@@ -126,17 +126,17 @@ export const inventoryApp: BusinessApp = {
   screenshots: [
     {
       id: "dashboard",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+      image: "/images/company/growth.jpg",
       caption: { ko: "직관적인 재고 대시보드", en: "Intuitive Inventory Dashboard" },
     },
     {
       id: "mobile",
-      image: "https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?w=800&q=80",
+      image: "/images/apps/inventory-barcode.jpg",
       caption: { ko: "모바일 바코드 스캔", en: "Mobile Barcode Scanning" },
     },
     {
       id: "reports",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+      image: "/images/apps/analytics.jpg",
       caption: { ko: "상세 재고 리포트", en: "Detailed Inventory Reports" },
     },
   ],
@@ -174,7 +174,7 @@ export const crmApp: BusinessApp = {
   icon: Users,
   color: "#06B6D4",
   bgColor: "#CFFAFE",
-  heroImage: "https://images.unsplash.com/photo-1552581234-26160f608093?w=1200&q=80",
+  heroImage: "/images/apps/crm-hero.jpg",
   
   features: [
     {
@@ -218,17 +218,17 @@ export const crmApp: BusinessApp = {
   screenshots: [
     {
       id: "pipeline-view",
-      image: "https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=800&q=80",
+      image: "/images/apps/crm-customer.jpg",
       caption: { ko: "칸반 스타일 파이프라인", en: "Kanban-style Pipeline" },
     },
     {
       id: "customer-profile",
-      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
+      image: "/images/apps/crm-pipeline.jpg",
       caption: { ko: "고객 프로필 상세", en: "Customer Profile Details" },
     },
     {
       id: "analytics",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+      image: "/images/apps/analytics.jpg",
       caption: { ko: "영업 분석 대시보드", en: "Sales Analytics Dashboard" },
     },
   ],
@@ -266,7 +266,7 @@ export const accountingApp: BusinessApp = {
   icon: Calculator,
   color: "#8B5CF6",
   bgColor: "#EDE9FE",
-  heroImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80",
+  heroImage: "/images/apps/accounting-hero.jpg",
   
   features: [
     {
@@ -310,17 +310,17 @@ export const accountingApp: BusinessApp = {
   screenshots: [
     {
       id: "dashboard",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+      image: "/images/company/growth.jpg",
       caption: { ko: "회계 대시보드", en: "Accounting Dashboard" },
     },
     {
       id: "invoice",
-      image: "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=800&q=80",
+      image: "/images/apps/accounting-report.jpg",
       caption: { ko: "청구서 자동 처리", en: "Automatic Invoice Processing" },
     },
     {
       id: "reports",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+      image: "/images/apps/analytics.jpg",
       caption: { ko: "재무 보고서", en: "Financial Reports" },
     },
   ],
@@ -358,7 +358,7 @@ export const knowledgeApp: BusinessApp = {
   icon: BookOpen,
   color: "#0EA5E9",
   bgColor: "#E0F2FE",
-  heroImage: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&q=80",
+  heroImage: "/images/apps/knowledge-hero.jpg",
   
   features: [
     {
@@ -402,17 +402,17 @@ export const knowledgeApp: BusinessApp = {
   screenshots: [
     {
       id: "editor",
-      image: "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&q=80",
+      image: "/images/apps/knowledge-search.jpg",
       caption: { ko: "강력한 편집기 인터페이스", en: "Powerful Editor Interface" },
     },
     {
       id: "organize",
-      image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&q=80",
+      image: "/images/apps/knowledge-wiki.jpg",
       caption: { ko: "유연한 콘텐츠 구성", en: "Flexible Content Organization" },
     },
     {
       id: "collaboration",
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+      image: "/images/company/team.jpg",
       caption: { ko: "팀 협업 환경", en: "Team Collaboration" },
     },
   ],
@@ -450,7 +450,7 @@ export const signApp: BusinessApp = {
   icon: FileSignature,
   color: "#0D9488",
   bgColor: "#CCFBF1",
-  heroImage: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80",
+  heroImage: "/images/apps/sign-hero.jpg",
   
   features: [
     {
@@ -494,17 +494,17 @@ export const signApp: BusinessApp = {
   screenshots: [
     {
       id: "template",
-      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80",
+      image: "/images/apps/sign-document.jpg",
       caption: { ko: "서명 템플릿 편집", en: "Signature Template Editing" },
     },
     {
       id: "mobile-sign",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
+      image: "/images/apps/sign-mobile.jpg",
       caption: { ko: "모바일 서명", en: "Mobile Signing" },
     },
     {
       id: "tracking-view",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+      image: "/images/company/growth.jpg",
       caption: { ko: "서명 상태 대시보드", en: "Signature Status Dashboard" },
     },
   ],

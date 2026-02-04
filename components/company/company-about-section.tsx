@@ -72,7 +72,7 @@ const DEFAULT_CONTENT = {
   },
 };
 
-const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80";
+const DEFAULT_IMAGE = "/images/company/about.jpg";
 
 export function CompanyAboutSection({ content, aboutImage, images }: CompanyAboutSectionProps) {
   const { lang } = useI18n();
