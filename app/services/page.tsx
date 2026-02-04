@@ -8,7 +8,6 @@ import { Footer } from "@/components/layout";
 import {
   ServicesHeroSection,
   ServicesAppsGrid,
-  ServicesCategoriesSection,
   ServicesCTASection,
 } from "@/components/services";
 
@@ -20,11 +19,8 @@ export default function ServicesPage() {
       {/* Hero Section - Odoo 스타일 */}
       <ServicesHeroSection />
 
-      {/* Apps Grid - Odoo 스타일 아이콘 그리드 */}
+      {/* 다양한 비즈니스 앱 제공 */}
       <ServicesAppsGrid />
-
-      {/* Domain Categories */}
-      <ServicesCategoriesSection />
 
       {/* CTA Section */}
       <ServicesCTASection />

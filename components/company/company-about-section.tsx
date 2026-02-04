@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { MotionWrapper, HoverScale } from "@/components/ui/motion";
 import { Users, Lightbulb, Target, LucideIcon } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 interface FeatureItem {
   icon: LucideIcon;
@@ -25,34 +26,58 @@ interface CompanyAboutSectionProps {
   };
 }
 
-// 기본 데이터
+// 기본 데이터 (다국어 지원)
 const DEFAULT_CONTENT = {
-  title: "통합으로 성장을 이끄는\nIT 전문 기업",
-  description: "인테그로는 DX(디지털 전환)와 AX(AI 전환)를 통해 고객사의 비즈니스 성장을 지원하는 IT 전문 기업입니다. 맞춤형 컨설팅부터 솔루션 개발, 도입까지 원스톱 서비스를 제공합니다.",
-  features: [
-    {
-      icon: Users,
-      title: "고객 중심",
-      desc: "고객의 비즈니스 목표를 최우선으로 생각합니다.",
-    },
-    {
-      icon: Lightbulb,
-      title: "혁신적 기술",
-      desc: "최신 기술과 AI를 활용한 혁신적인 솔루션을 제공합니다.",
-    },
-    {
-      icon: Target,
-      title: "맞춤형 솔루션",
-      desc: "각 기업의 특성에 맞는 맞춤형 솔루션을 설계합니다.",
-    },
-  ],
+  ko: {
+    title: "통합으로 성장을 이끄는\nIT 전문 기업",
+    description: "인테그로는 DX(디지털 전환)와 AX(AI 전환)를 통해 고객사의 비즈니스 성장을 지원하는 IT 전문 기업입니다. 맞춤형 컨설팅부터 솔루션 개발, 도입까지 원스톱 서비스를 제공합니다.",
+    features: [
+      {
+        icon: Users,
+        title: "고객 중심",
+        desc: "고객의 비즈니스 목표를 최우선으로 생각합니다.",
+      },
+      {
+        icon: Lightbulb,
+        title: "혁신적 기술",
+        desc: "최신 기술과 AI를 활용한 혁신적인 솔루션을 제공합니다.",
+      },
+      {
+        icon: Target,
+        title: "맞춤형 솔루션",
+        desc: "각 기업의 특성에 맞는 맞춤형 솔루션을 설계합니다.",
+      },
+    ],
+  },
+  en: {
+    title: "Leading Growth Through\nIntegration",
+    description: "Integro is a professional IT company that supports business growth through DX (Digital Transformation) and AX (AI Transformation). We provide one-stop services from customized consulting to solution development and implementation.",
+    features: [
+      {
+        icon: Users,
+        title: "Customer Focus",
+        desc: "We prioritize our customers' business goals above all else.",
+      },
+      {
+        icon: Lightbulb,
+        title: "Innovative Technology",
+        desc: "We provide innovative solutions using the latest technology and AI.",
+      },
+      {
+        icon: Target,
+        title: "Custom Solutions",
+        desc: "We design customized solutions tailored to each company's characteristics.",
+      },
+    ],
+  },
 };
 
 const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80";
 
 export function CompanyAboutSection({ content, aboutImage, images }: CompanyAboutSectionProps) {
-  // content가 없으면 기본값 사용
-  const displayContent = content || DEFAULT_CONTENT;
+  const { lang } = useI18n();
+  // content가 없으면 현재 언어에 맞는 기본값 사용
+  const displayContent = content || DEFAULT_CONTENT[lang as 'ko' | 'en'];
   // aboutImage 또는 images.about 또는 기본값 사용
   const displayImage = aboutImage || images?.about || DEFAULT_IMAGE;
   return (

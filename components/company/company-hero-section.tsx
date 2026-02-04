@@ -13,15 +13,15 @@ import { useI18n } from "@/lib/i18n";
 const defaultContent = {
   ko: {
     badge: "ABOUT US",
-    title1: "통합으로",
-    title2: "성장을 이끌다",
+    title1: "통합으로 성장을 이끌는",
+    title2: "IT 전문 기업",
     subtitle: "INTEGRATION FOR GROWS",
     description: "인테그로는 기업의 디지털 전환을 위한 최적의 IT 솔루션 파트너입니다. ERP, 시스템 통합, 맞춤형 개발 등 다양한 서비스를 제공합니다.",
   },
   en: {
     badge: "ABOUT US",
-    title1: "Integration",
-    title2: "for Growth",
+    title1: "Leading Growth",
+    title2: "Through Integration",
     subtitle: "INTEGRATION FOR GROWS",
     description: "Integro is the optimal IT solution partner for your company's digital transformation. We provide various services including ERP, system integration, and custom development.",
   },

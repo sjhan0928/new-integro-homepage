@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { useI18n } from "@/lib/i18n";
 import {
@@ -106,9 +107,11 @@ export function ServicesAppsGrid() {
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 md:gap-6">
           {apps.map((app, index) => {
             const Icon = app.icon;
-            return (
+            // 상세 페이지가 있는 앱들
+            const hasDetailPage = ["inventory", "crm", "accounting", "knowledge", "sign"].includes(app.id);
+            
+            const cardContent = (
               <motion.div
-                key={app.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -130,7 +133,23 @@ export function ServicesAppsGrid() {
                 <span className="text-xs md:text-sm font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors">
                   {app.title[langKey]}
                 </span>
+                {/* 상세 페이지 있는 앱 표시 */}
+                {hasDetailPage && (
+                  <span className="text-[10px] text-blue-500 mt-1">
+                    {langKey === 'ko' ? '상세보기' : 'Details'}
+                  </span>
+                )}
               </motion.div>
+            );
+
+            return hasDetailPage ? (
+              <Link key={app.id} href={`/services/apps/${app.id}`}>
+                {cardContent}
+              </Link>
+            ) : (
+              <div key={app.id}>
+                {cardContent}
+              </div>
             );
           })}
         </div>

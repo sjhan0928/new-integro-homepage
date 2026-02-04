@@ -66,9 +66,9 @@ export function Header() {
             <Image
               src={isScrolled ? "/images/logo_color.png" : (isDarkMode ? "/images/logo_white.png" : "/images/logo_color.png")}
               alt="Integro"
-              width={320}
-              height={88}
-              className="h-16 w-auto"
+              width={360}
+              height={100}
+              className="h-20 w-auto"
               priority
             />
           </Link>

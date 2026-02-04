@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { homePageImages, BRAND_COLORS } from "@/data";
 import { useI18n } from "@/lib/i18n";
+import { openFloatingContact } from "@/components/floating-contact";
 import { ArrowRight, Play } from "lucide-react";
 
 // 로테이션 키워드 설정 - DX, AX만
@@ -155,6 +156,7 @@ export function HeroHomeSection({ id = "hero-section", className }: HeroHomeSect
           <motion.div whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.98 }}>
             <Button
               size="lg"
+              onClick={() => openFloatingContact()}
               className={`bg-gradient-to-r ${BRAND_COLORS.gradient} text-white hover:opacity-90 gap-2 sm:gap-3 text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 rounded-full font-bold shadow-2xl shadow-blue-600/20 border-0 transition-all duration-300`}
             >
               {t("hero.cta.primary")}
@@ -165,6 +167,7 @@ export function HeroHomeSection({ id = "hero-section", className }: HeroHomeSect
             <Button
               size="lg"
               variant="outline"
+              onClick={() => window.location.href = '/services'}
               className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 gap-2 sm:gap-3 text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 rounded-full font-bold shadow-xl transition-all duration-300"
             >
               <Play className="h-4 w-4 sm:h-5 sm:w-5" />

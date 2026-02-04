@@ -25,8 +25,7 @@ const footerContent = {
     company: {
       title: "COMPANY",
       about: "회사 소개",
-      works: "포트폴리오",
-      careers: "채용",
+      works: "적용 사례",
     },
     contact: {
       title: "CONTACT",
@@ -48,7 +47,7 @@ const footerContent = {
     },
     copyright: "인테그로 주식회사 (Integro Co., Ltd.). All rights reserved.",
     privacy: "개인정보처리방침",
-    terms: "이용약관",
+    ceoMessage: "CEO 인사말",
   },
   en: {
     tagline: "IT Solutions Company Leading Growth Through Integration",
@@ -63,8 +62,7 @@ const footerContent = {
     company: {
       title: "COMPANY",
       about: "About Us",
-      works: "Portfolio",
-      careers: "Careers",
+      works: "Case Studies",
     },
     contact: {
       title: "CONTACT",
@@ -86,7 +84,7 @@ const footerContent = {
     },
     copyright: "Integro Co., Ltd. All rights reserved.",
     privacy: "Privacy Policy",
-    terms: "Terms of Service",
+    ceoMessage: "CEO Message",
   },
 };
 
@@ -181,11 +179,6 @@ export function Footer() {
                   {content.company.works}
                 </Link>
               </li>
-              <li>
-                <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                  {content.company.careers}
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -266,9 +259,9 @@ export function Footer() {
                 >
                   {content.privacy}
                 </button>
-                <a href="#" className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
-                  {content.terms}
-                </a>
+                <Link href="/company" className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                  {content.ceoMessage}
+                </Link>
               </div>
             </div>
           </div>

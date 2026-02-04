@@ -1,13 +1,7 @@
-// 다국어 지원 데이터
-export type Language = "ko" | "en";
+// 홈페이지 데이터 (번역, 이미지, 색상)
 
-export interface I18nData {
-  ko: Record<string, string>;
-  en: Record<string, string>;
-}
-
-// 홈페이지 다국어 데이터
-export const homePageTranslations: I18nData = {
+// 홈페이지 다국어 번역 데이터
+export const homePageTranslations = {
   ko: {
     // Hero Section
     "hero.dx": "DX?",
@@ -272,7 +266,7 @@ export const homePageTranslations: I18nData = {
     "nav.company": "About",
     "nav.contact": "Contact",
   },
-};
+} as const;
 
 // 이미지 경로 데이터 (언어 독립적)
 export const homePageImages = {

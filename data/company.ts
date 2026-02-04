@@ -1,4 +1,112 @@
-// 회사 정보 및 홈페이지 콘텐츠 데이터
+// 회사 정보 및 회사소개 페이지 콘텐츠 데이터
+
+// ============================================
+// 회사 소개 페이지 다국어 데이터
+// ============================================
+export const companyPageTranslations = {
+  ko: {
+    // Hero Section
+    "hero.badge": "ABOUT US",
+    "hero.title1": "통합으로 성장을 이끄는",
+    "hero.title2": "IT 전문 기업",
+    "hero.subtitle": "INTEGRATION FOR GROWS",
+    "hero.description": "인테그로는 기업의 디지털 전환을 위한 최적의 IT 솔루션 파트너입니다. ERP, 시스템 통합, 맞춤형 개발 등 다양한 서비스를 제공합니다.",
+
+    // About Section
+    "about.badge": "회사 소개",
+    "about.title": "인테그로",
+    "about.highlight": "주식회사",
+    "about.description": "인테그로 주식회사는 효율적인 자원 관리와 운영 프로세스를 지원하는 IT 전문 기업입니다. 정유, 윤활유, 가스 등 에너지 자원 유통 산업을 위한 맞춤형 ERP 시스템과 통합 유통 솔루션을 제공합니다.",
+    "about.feature1.title": "맞춤형 ERP 시스템",
+    "about.feature1.desc": "정유 유통 산업을 위한 맞춤형 ERP 시스템과 통합 유통 솔루션을 제공합니다.",
+    "about.feature2.title": "효율적인 자원 관리",
+    "about.feature2.desc": "효율적인 자원 관리와 운영 프로세스를 지원하여 기업의 업무 효율성과 경쟁력을 극대화합니다.",
+    "about.feature3.title": "글로벌 IT 솔루션",
+    "about.feature3.desc": "베트남 개발센터를 통해 글로벌 시장에 최적화된 IT 솔루션을 개발하고 제공합니다.",
+
+    // Vision Section
+    "vision.badge": "비전",
+    "vision.title": "디지털 전환을",
+    "vision.highlight": "선도합니다",
+    "vision.quote": "인테그로는 다양한 산업 분야의 디지털 전환(Digital Transformation)을 선도하며, 스마트 운영 Eco 시스템 구축을 통해 고객사의 지속 가능한 비즈니스 성장과 효율성 향상에 기여합니다.",
+    "vision.pillar1.title": "디지털 전환",
+    "vision.pillar1.desc": "다양한 산업 분야의 디지털 혁신을 선도하며, 기업의 디지털 경쟁력을 강화합니다.",
+    "vision.pillar2.title": "스마트 운영",
+    "vision.pillar2.desc": "효율적인 Eco 시스템 구축을 통해 기업의 운영 프로세스를 최적화합니다.",
+    "vision.pillar3.title": "지속 가능한 성장",
+    "vision.pillar3.desc": "고객사의 비즈니스 성장과 효율성을 향상시켜 장기적인 경쟁력을 확보합니다.",
+
+    // Values Section
+    "values.badge": "핵심 가치",
+    "values.title": "우리가 추구하는",
+    "values.highlight": "가치",
+    "values.value1.title": "고객 중심",
+    "values.value1.desc": "고객의 성공이 우리의 성공입니다. 고객의 니즈를 깊이 이해하고 최적의 솔루션을 제공합니다.",
+    "values.value2.title": "기술 혁신",
+    "values.value2.desc": "끊임없는 기술 혁신을 통해 고객에게 최신 기술 트렌드를 반영한 솔루션을 제공합니다.",
+    "values.value3.title": "신뢰와 협력",
+    "values.value3.desc": "투명한 소통과 협력을 통해 고객과 파트너사와 함께 성장합니다.",
+
+    // CTA Section
+    "cta.title": "디지털 전환의",
+    "cta.highlight": "파트너가 되겠습니다",
+    "cta.description": "인테그로와 함께 비즈니스의 디지털 전환을 시작하세요. 전문 컨설턴트가 귀사에 최적화된 솔루션을 제안해 드립니다.",
+    "cta.button": "상담 신청하기",
+  },
+  en: {
+    // Hero Section
+    "hero.badge": "ABOUT US",
+    "hero.title1": "Leading Growth",
+    "hero.title2": "Through Integration",
+    "hero.subtitle": "INTEGRATION FOR GROWS",
+    "hero.description": "Integro is the optimal IT solution partner for your company's digital transformation. We provide various services including ERP, system integration, and custom development.",
+
+    // About Section
+    "about.badge": "ABOUT US",
+    "about.title": "Integro",
+    "about.highlight": "Co., Ltd.",
+    "about.description": "Integro Co., Ltd. is a professional IT company that supports efficient resource management and operational processes. We provide customized ERP systems and integrated distribution solutions for the energy resource distribution industry.",
+    "about.feature1.title": "Custom ERP Systems",
+    "about.feature1.desc": "We provide customized ERP systems and integrated distribution solutions for the energy distribution industry.",
+    "about.feature2.title": "Efficient Resource Management",
+    "about.feature2.desc": "We maximize business efficiency and competitiveness through efficient resource management and operational processes.",
+    "about.feature3.title": "Global IT Solutions",
+    "about.feature3.desc": "Through our Vietnam development center, we develop and provide IT solutions optimized for the global market.",
+
+    // Vision Section
+    "vision.badge": "VISION",
+    "vision.title": "Leading",
+    "vision.highlight": "Digital Transformation",
+    "vision.quote": "Integro leads digital transformation across various industries and contributes to sustainable business growth and efficiency improvement through smart operation ecosystem construction.",
+    "vision.pillar1.title": "Digital Transformation",
+    "vision.pillar1.desc": "We lead digital innovation across various industries and strengthen corporate digital competitiveness.",
+    "vision.pillar2.title": "Smart Operations",
+    "vision.pillar2.desc": "We optimize corporate operational processes through efficient eco-system construction.",
+    "vision.pillar3.title": "Sustainable Growth",
+    "vision.pillar3.desc": "We secure long-term competitiveness by improving business growth and efficiency.",
+
+    // Values Section
+    "values.badge": "CORE VALUES",
+    "values.title": "Our",
+    "values.highlight": "Values",
+    "values.value1.title": "Customer Focus",
+    "values.value1.desc": "Our customers' success is our success. We deeply understand customer needs and provide optimal solutions.",
+    "values.value2.title": "Technical Innovation",
+    "values.value2.desc": "Through continuous innovation, we provide solutions that reflect the latest technology trends.",
+    "values.value3.title": "Trust & Collaboration",
+    "values.value3.desc": "Through transparent communication and collaboration, we grow together with customers and partners.",
+
+    // CTA Section
+    "cta.title": "Your Partner for",
+    "cta.highlight": "Digital Transformation",
+    "cta.description": "Start your digital transformation journey with Integro. Our expert consultants will propose the best solutions optimized for your business.",
+    "cta.button": "Request Consultation",
+  },
+} as const;
+
+// ============================================
+// 공통 데이터 (언어 독립적)
+// ============================================
 export interface CompanyMeta {
   company: string;
   tagline: string;

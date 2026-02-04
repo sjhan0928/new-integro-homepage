@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, Send, CheckCircle2 } from "lucide-react";
+import { MessageCircle, X, Send, CheckCircle2, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PrivacyPolicyModal } from "@/components/modal/privacy-policy-modal";
 
@@ -32,6 +32,7 @@ interface FormData {
 export function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
   const [showBounce, setShowBounce] = useState(true);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [privacyAgreed, setPrivacyAgreed] = useState(false);
@@ -54,6 +55,21 @@ export function FloatingContact() {
       globalSetIsOpen = null;
     };
   }, []);
+
+  // 스크롤 감지 - 맨 위로 버튼 표시 여부
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // 맨 위로 스크롤
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   // 초기 바운스 애니메이션 후 중지
   useEffect(() => {
@@ -314,39 +330,59 @@ export function FloatingContact() {
         )}
       </AnimatePresence>
 
-      {/* 플로팅 버튼 */}
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-[#0d4f8b] to-[#3ecf8e] shadow-lg shadow-primary/25 flex items-center justify-center hover:shadow-xl hover:scale-110 transition-all duration-300"
-        animate={showBounce ? { y: [0, -8, 0] } : {}}
-        transition={showBounce ? { duration: 1, repeat: Infinity, repeatDelay: 1 } : {}}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <AnimatePresence mode="wait">
-          {isOpen ? (
-            <motion.div
-              key="close"
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
+      {/* 플로팅 버튼 그룹 */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3">
+        {/* 맨 위로 버튼 */}
+        <AnimatePresence>
+          {showScrollTop && !isOpen && (
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.8, y: 10 }}
+              onClick={scrollToTop}
+              className="w-14 h-14 rounded-full bg-gradient-to-r from-[#0d4f8b] to-[#3ecf8e] shadow-lg shadow-primary/20 flex items-center justify-center hover:shadow-xl transition-all duration-300"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <X className="w-6 h-6 text-white" />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="open"
-              initial={{ rotate: 90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: -90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <MessageCircle className="w-6 h-6 text-white" />
-            </motion.div>
+              <ChevronUp className="w-6 h-6 text-white" />
+            </motion.button>
           )}
         </AnimatePresence>
-      </motion.button>
+
+        {/* 문의하기 버튼 */}
+        <motion.button
+          onClick={() => setIsOpen(!isOpen)}
+          className="w-16 h-16 rounded-full bg-gradient-to-r from-[#0d4f8b] to-[#3ecf8e] shadow-lg shadow-primary/25 flex items-center justify-center hover:shadow-xl hover:scale-110 transition-all duration-300"
+          animate={showBounce ? { y: [0, -8, 0] } : {}}
+          transition={showBounce ? { duration: 1, repeat: Infinity, repeatDelay: 1 } : {}}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <AnimatePresence mode="wait">
+            {isOpen ? (
+              <motion.div
+                key="close"
+                initial={{ rotate: -90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: 90, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                <X className="w-7 h-7 text-white" />
+              </motion.div>
+            ) : (
+              <motion.div
+                key="open"
+                initial={{ rotate: 90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: -90, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                <MessageCircle className="w-7 h-7 text-white" />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.button>
+      </div>
 
       {/* 개인정보처리방침 모달 */}
       <PrivacyPolicyModal
